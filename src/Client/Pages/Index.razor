@@ -6,7 +6,20 @@
 
 <h3> This aint just a game.</h3>
 
-<div>
-    here comes the grid
+<div class="game-board">
+    
+    @foreach( Domain.Card card in _cards)
+    {
+        <div @onclick="() => CardClicked(card)"> 
+            @if (card.IsFaceUp)
+            {
+                @card.Number
+            } else
+            {
+               @Back
+            }
+        </div>
+    }
 </div>
+
 

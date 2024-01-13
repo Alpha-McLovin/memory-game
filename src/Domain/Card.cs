@@ -6,11 +6,8 @@ public class Card
 
     public Card(int num)
     {
-        this.Number = num;
+        Number = num;
     }
-
-    
-
 
     public void TurnCard()
     {
