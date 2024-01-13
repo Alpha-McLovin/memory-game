@@ -4,9 +4,8 @@ namespace Client.Pages;
 
 public partial class Index
 {
-    private Game _game = new Game(8);
+    private readonly Game _game = new(8);
     private List<Card> _cards = new();
-
     private Card? _previous = null;
 
     public string Back = "back";
@@ -30,7 +29,6 @@ public partial class Index
             _game.GameLogic(_previous, card);
             _previous = null;
         }
-
     }
 }
 

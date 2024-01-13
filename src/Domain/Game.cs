@@ -25,6 +25,7 @@ public class Game
     {
         MakeDeck();
         ShuffleDeck();
+        TurnAllCardsBack(_turnedCards);
     }
 
     public void GameLogic(Card card1 , Card card2)

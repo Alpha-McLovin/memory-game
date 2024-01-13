@@ -4,6 +4,13 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+body{
+  /*  background-image: url("../images/background.jpg");
+    background-repeat: repeat;
+    background-size: contain*/
+  background-color:antiquewhite
+}
+
 h1:focus {
     outline: none;
 }
@@ -63,9 +70,36 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
+.container {
+    /*background-color: antiquewhite;*/
+    display: flex;
+    justify-content: center
+}
 
 .game-board {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
+
+.gameImage {
+    width: 200px;
+    border-radius: 10px
+}
+
+.victoryImage {
+    height: 95vh;
+    border-radius: 10px
+}
+
+.newgame {
+    background-color: bisque;
+    border: 2px solid saddlebrown;
+    color: saddlebrown;
+    border-radius: 10px
+}
+
+    .newgame:hover {
+        background-color: blanchedalmond;
+        font-weight: bold;
+    }

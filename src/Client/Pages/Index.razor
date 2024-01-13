@@ -2,24 +2,34 @@
 
 <PageTitle>Memory</PageTitle>
 
-<h1>Welcome</h1>
 
-<h3> This aint just a game.</h3>
+<div class="container">
+  
+    @if (_game.GameWon)
+    {        
+        <img class="victoryImage" alt="Card_back" src=@($"images/victory.jpg") />     
+    }
 
-<div class="game-board">
-    
-    @foreach( Domain.Card card in _cards)
+    else
     {
-        <div @onclick="() => CardClicked(card)"> 
-            @if (card.IsFaceUp)
+        <div class="game-board">
+            @foreach (Domain.Card card in _cards)
             {
-                @card.Number
-            } else
-            {
-               @Back
+                <div @onclick="() => CardClicked(card)">
+                    @if (card.IsFaceUp)
+                    {
+                        <img class="gameImage" alt="Card_@card.Number" src=@($"images/image{card.Number}.jpg") />
+   
+                    }
+                    else
+                    {
+                        <img class="gameImage" alt="Card_back" src=@($"images/cardback.jpg") />
+                    }
+                </div>
             }
         </div>
     }
+
 </div>
 
 
